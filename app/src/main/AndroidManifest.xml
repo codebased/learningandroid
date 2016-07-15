@@ -22,6 +22,14 @@
                 <data android:scheme="curry" />
             </intent-filter>
         </activity>
+        <activity android:name=".CustomIntentReceiver2">
+            <intent-filter>
+                <action android:name="MYACTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.imcodebased.intent.category.TOAST" />
+                <data android:scheme="curry" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

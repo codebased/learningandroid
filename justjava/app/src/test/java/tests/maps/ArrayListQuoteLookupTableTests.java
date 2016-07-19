@@ -1,4 +1,4 @@
-package tests;
+package tests.maps;
 
 import maps.ArrayListQuoteLookupTable;
 import maps.QuoteLookupTable;

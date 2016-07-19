@@ -1,4 +1,4 @@
-package tests;
+package tests.maps;
 
 import junit.framework.Assert;
 

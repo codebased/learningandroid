@@ -15,6 +15,6 @@ public class Customer
 
     public void reply(final String message, final Category category)
     {
-        System.out.printf("%s: %s %s(%d)\n", name, message, category.name(), category.ordinal());
+        System.out.printf("%s: %s (%d)\n", name, String.format(message, category.name()), category.ordinal());
     }
 }

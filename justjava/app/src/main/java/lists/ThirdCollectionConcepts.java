@@ -70,8 +70,10 @@ public class ThirdCollectionConcepts {
         Collections.shuffle((List<Quote>) quotes);
         System.out.println(quotes);
 
-        // 7. rotate
+        // 8. rotate
         Collections.rotate((List<Quote>) quotes, 3);
         System.out.println(quotes);
+
+        // TODO: 19/07/16 sort by author name descending
     }
 }

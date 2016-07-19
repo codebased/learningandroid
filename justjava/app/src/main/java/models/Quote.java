@@ -19,6 +19,7 @@ public class Quote {
         }
     };
 
+
     protected int id;
     protected String quote;
     protected String author;
@@ -69,5 +70,10 @@ public class Quote {
         this.quote = quote;
         this.author = author;
         this.genre = genre;
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
     }
 }

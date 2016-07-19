@@ -2,8 +2,8 @@ package queues.models;
 
 public enum Category
 {
-    PRINTER ,
-    COMPUTER,
-    PHONE,
-    TABLET
+    MILK,
+    VEGETABLES,
+    FRUITS,
+    JOBS
 }

@@ -18,9 +18,9 @@ public class PriorityQuery extends GeneralQuery {
     public static void main(String[] args) {
         PriorityQuery helpDesk = new PriorityQuery();
 
-        helpDesk.enquire(Customer.RAMA, Category.PHONE);
-        helpDesk.enquire(Customer.SHYAMA, Category.PRINTER);
-        helpDesk.enquire(Customer.GHANSHYAMA, Category.COMPUTER);
+        helpDesk.enquire(Customer.RAMA, Category.JOBS);
+        helpDesk.enquire(Customer.SHYAMA, Category.MILK);
+        helpDesk.enquire(Customer.GHANSHYAMA, Category.VEGETABLES);
 
         helpDesk.processAllEnquiries();
     }
@@ -30,3 +30,8 @@ public class PriorityQuery extends GeneralQuery {
         return new PriorityQueue<>(10, BY_CATEGORY);
     }
 }
+
+// TODO: 19/07/16 Instead of using a default priority for category type, which is from 0 to X,
+// can you redefine the category enum which take an integer as a priority
+// and use the same for defining the priority for your queue.
+// hint: create a new comparator called BY_CATEGORY_PRIORITY.

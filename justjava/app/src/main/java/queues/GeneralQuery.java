@@ -22,7 +22,7 @@ public class GeneralQuery {
         do {
             enquiry = getNextItem();
             if (enquiry != null) {
-                enquiry.getCustomer().reply("Please try restarting your", enquiry.getCategory());
+                enquiry.getCustomer().reply("I can solve your %s problem.", enquiry.getCategory());
             }
         } while (enquiry != null);
     }
@@ -31,17 +31,26 @@ public class GeneralQuery {
         return enquiries.poll();
     }
 
+    public void processJobEnquiries() {
+        // TODO: 19/07/16 write a code to process any query related with Jobs.
+    }
+
+    public void processOtherEnquiries() {
+        // TODO: 19/07/16 write a code to process any query other than the Jobs.
+    }
+
     public static void main(String[] args) {
         GeneralQuery helpDesk = new GeneralQuery();
 
-        helpDesk.enquire(Customer.RAMA, Category.PHONE);
-        helpDesk.enquire(Customer.SHYAMA, Category.PRINTER);
-        helpDesk.enquire(Customer.GHANSHYAMA, Category.COMPUTER);
+        helpDesk.enquire(Customer.RAMA, Category.VEGETABLES);
+        helpDesk.enquire(Customer.SHYAMA, Category.FRUITS);
+        helpDesk.enquire(Customer.GHANSHYAMA, Category.MILK);
+        helpDesk.enquire(Customer.RAMA, Category.JOBS);
 
         helpDesk.processAllEnquiries();
     }
 
-    public Queue<Enquiry> getQueue(){
+    public Queue<Enquiry> getQueue() {
         return new ArrayDeque<>();
     }
 }

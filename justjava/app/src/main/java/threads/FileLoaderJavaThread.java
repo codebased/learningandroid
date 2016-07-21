@@ -1,18 +1,16 @@
-package thread;
+package threads;
 
 /**
  * Created by codebased on 21/07/16.
  */
-public class FileLoaderAsyncTask {
+public class FileLoaderJavaThread {
 
     public static void main(String args[]) throws InterruptedException {
 
         System.out.printf("MAIN METHOD WITH THREAD ID...%s\n", Thread.currentThread().getId());
 
-        FileLoaderRunnable fileLoaderAsyncTask = new FileLoaderRunnable();
-        fileLoaderAsyncTask.play();
+        FileLoaderRunnable.play();
 
-        System.out.println("MAIN METHOD END");
+        System.out.printf("MAIN METHOD END WITH THREAD ID...%s", Thread.currentThread().getId());
     }
-
 }

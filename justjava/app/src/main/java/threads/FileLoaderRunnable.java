@@ -8,7 +8,7 @@ import java.io.IOException;
 // runnable class is avaialble for android as well as java.
 public class FileLoaderRunnable implements Runnable {
 
-    String fileName = "/Users/codebased/Documents/gits/rnd/learningandroid/justjava/app/src/main/java/thread/quotes.json";
+    String fileName = "/Users/codebased/Documents/gits/learningandroid/justjava/app/src/main/java/threads/quotes.json";
 
     @Override
     public void run() {
@@ -53,7 +53,7 @@ public class FileLoaderRunnable implements Runnable {
         System.out.printf("Progress...ThreadId (%d) -> (%d of %d) \n", Thread.currentThread().getId(), count, total);
     }
 
-    public void play() throws InterruptedException {
+    public static void play() throws InterruptedException {
 
         System.out.printf("MAIN THREAD ID...%s\n", Thread.currentThread().getId());
 

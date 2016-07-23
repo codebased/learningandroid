@@ -1,4 +1,4 @@
-package thread;
+package threads;
 
 /**
  * Created by codebased on 21/07/16.

@@ -1,1 +1,1 @@
-include ':app', ':customintentlauncher'
+include ':app', ':intentlauncher'

@@ -1,2 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/codebased/Documents/gits/rnd/learningandroid/ProcessCommunication/Intents/intentlauncher/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/codebased/Documents/gits/rnd/learningandroid/ProcessCommunication/Intents/intentlauncher/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_d6686fa1a2960e9540cb04454490fc904fa7b691.jar" />
+    </item>
+    <item
+        jar="/Users/codebased/Documents/gits/rnd/learningandroid/ProcessCommunication/Intents/intentlauncher/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="/Users/codebased/Documents/gits/rnd/learningandroid/ProcessCommunication/Intents/intentlauncher/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.0.0_8a7f50593dd8a8bb65ae64af7f20dbaab189cb23.jar" />
+    </item>
+    <item
+        jar="/Users/codebased/Documents/gits/rnd/learningandroid/ProcessCommunication/Intents/intentlauncher/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="/Users/codebased/Documents/gits/rnd/learningandroid/ProcessCommunication/Intents/intentlauncher/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.0.0_1949f937fcecc211f814e685419ba1154847f215.jar" />
+    </item>
+    <item
+        jar="/Users/codebased/Documents/gits/rnd/learningandroid/ProcessCommunication/Intents/intentlauncher/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="/Users/codebased/Documents/gits/rnd/learningandroid/ProcessCommunication/Intents/intentlauncher/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.0.0_9a529401d9590b616c6453761c9cd34dfb76db05.jar" />
+    </item>
+    <item
+        jar="/Users/codebased/Documents/gits/rnd/learningandroid/ProcessCommunication/Intents/intentlauncher/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/codebased/Documents/gits/rnd/learningandroid/ProcessCommunication/Intents/intentlauncher/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_97614306c7b8bbdc3932a43e3f68561c49380b9c.jar" />
+    </item>
+    <item
+        jar="/Users/codebased/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.0.0/2943c74db6d4346ab8c6531adac91fa05c137c40/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/codebased/Documents/gits/rnd/learningandroid/ProcessCommunication/Intents/intentlauncher/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_0c4c48e06e86c20e8c4efcccc90a265c35292336.jar" />
+    </item>
+
+</items>

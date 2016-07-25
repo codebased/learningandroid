@@ -1,4 +1,4 @@
-package com.imcodebased.androidviewlifecycle;
+package helpers;
 
 import android.util.Log;
 

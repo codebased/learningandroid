@@ -1,4 +1,4 @@
-package com.imcodebased.androidviewlifecycle;
+package com.imcodebased.activities;
 
 import org.junit.Test;
 

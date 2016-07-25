@@ -1,21 +1,27 @@
-package com.imcodebased.androidviewlifecycle;
+package com.imcodebased.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
-import static com.imcodebased.androidviewlifecycle.LogUtil.logSuperStartEntry;
-import static com.imcodebased.androidviewlifecycle.LogUtil.logSuperStopEntry;
+import static helpers.LogUtil.logSuperStartEntry;
+import static helpers.LogUtil.logSuperStopEntry;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     protected void onCreate(Bundle savedInstanceState) {
+
         logSuperStartEntry(MainActivity.class);
         super.onCreate(savedInstanceState);
         logSuperStopEntry(MainActivity.class);
-
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.launchXmlFragmentActivity).setOnClickListener(this);
+        findViewById(R.id.launchDynamicFragmentActivity).setOnClickListener(this);
     }
+
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
@@ -57,5 +63,14 @@ public class MainActivity extends AppCompatActivity {
         logSuperStartEntry(MainActivity.class);
         super.onDestroy();
         logSuperStopEntry(MainActivity.class);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.launchXmlFragmentActivity) {
+            startActivity(new Intent(this, XmlFragmentActivity.class));
+        } else if (view.getId() == R.id.launchDynamicFragmentActivity) {
+            startActivity(new Intent(this, DynamicFragmentActivity.class));
+        }
     }
 }

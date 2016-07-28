@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DialogActivity">
+        <activity android:name=".MainActivityFragmentCycle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -17,7 +17,6 @@
         </activity>
 
         <activity android:name=".XmlFragmentActivity"/>
-        <activity android:name=".DynamicFragmentActivity"/>
     </application>
 
 </manifest>

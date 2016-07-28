@@ -17,9 +17,17 @@ import static helpers.LogUtil.logSuperStopEntry;
 public class Fragment1 extends Fragment {
 
     @Override
+    public void onAttach(Context context) {
+        logSuperStartEntry(Fragment1.class);
+        super.onAttach(context);
+        logSuperStopEntry(Fragment1.class);
+    }
+
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
+        logSuperStartEntry(Fragment1.class);
         super.onCreate(savedInstanceState);
-        if ( isAdded())return;
+        logSuperStopEntry(Fragment1.class);
     }
 
     @Nullable
@@ -32,25 +40,11 @@ public class Fragment1 extends Fragment {
         return view;
     }
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        logSuperStartEntry(Fragment1.class);
-        super.onViewCreated(view, savedInstanceState);
-        logSuperStopEntry(Fragment1.class);
-
-    }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         logSuperStartEntry(Fragment1.class);
         super.onActivityCreated(savedInstanceState);
-        logSuperStopEntry(Fragment1.class);
-    }
-
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-        logSuperStartEntry(Fragment1.class);
-        super.onViewStateRestored(savedInstanceState);
         logSuperStopEntry(Fragment1.class);
     }
 
@@ -117,10 +111,5 @@ public class Fragment1 extends Fragment {
         logSuperStopEntry(Fragment1.class);
     }
 
-    @Override
-    public void onAttach(Context context) {
-        logSuperStartEntry(Fragment1.class);
-        super.onAttach(context);
-        logSuperStopEntry(Fragment1.class);
-    }
+
 }

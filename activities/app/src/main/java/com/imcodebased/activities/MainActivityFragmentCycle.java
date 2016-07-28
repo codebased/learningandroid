@@ -9,60 +9,58 @@ import android.view.View;
 import static helpers.LogUtil.logSuperStartEntry;
 import static helpers.LogUtil.logSuperStopEntry;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivityFragmentCycle extends AppCompatActivity implements View.OnClickListener {
 
     protected void onCreate(Bundle savedInstanceState) {
 
-        logSuperStartEntry(MainActivity.class);
+        logSuperStartEntry(MainActivityFragmentCycle.class);
         super.onCreate(savedInstanceState);
-        logSuperStopEntry(MainActivity.class);
-        setContentView(R.layout.activity_main);
-
-        findViewById(R.id.launchXmlFragmentActivity).setOnClickListener(this);
-        findViewById(R.id.launchDynamicFragmentActivity).setOnClickListener(this);
+        logSuperStopEntry(MainActivityFragmentCycle.class);
+        setContentView(R.layout.activity_fragment_main);
+        getSupportFragmentManager().beginTransaction().add(R.id.container, new Fragment1(), "").commit();
     }
 
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
-        logSuperStartEntry(MainActivity.class);
+        logSuperStartEntry(MainActivityFragmentCycle.class);
         super.onPostCreate(savedInstanceState);
-        logSuperStopEntry(MainActivity.class);
+        logSuperStopEntry(MainActivityFragmentCycle.class);
     }
 
     @Override
     protected void onStart() {
-        logSuperStartEntry(MainActivity.class);
+        logSuperStartEntry(MainActivityFragmentCycle.class);
         super.onStart();
-        logSuperStopEntry(MainActivity.class);
+        logSuperStopEntry(MainActivityFragmentCycle.class);
     }
 
     @Override
     protected void onResume() {
-        logSuperStartEntry(MainActivity.class);
+        logSuperStartEntry(MainActivityFragmentCycle.class);
         super.onResume();
-        logSuperStopEntry(MainActivity.class);
+        logSuperStopEntry(MainActivityFragmentCycle.class);
     }
 
     @Override
     protected void onStop() {
-        logSuperStartEntry(MainActivity.class);
+        logSuperStartEntry(MainActivityFragmentCycle.class);
         super.onStop();
-        logSuperStopEntry(MainActivity.class);
+        logSuperStopEntry(MainActivityFragmentCycle.class);
     }
 
     @Override
     protected void onPause() {
-        logSuperStartEntry(MainActivity.class);
+        logSuperStartEntry(MainActivityFragmentCycle.class);
         super.onPause();
-        logSuperStopEntry(MainActivity.class);
+        logSuperStopEntry(MainActivityFragmentCycle.class);
     }
 
     @Override
     protected void onDestroy() {
-        logSuperStartEntry(MainActivity.class);
+        logSuperStartEntry(MainActivityFragmentCycle.class);
         super.onDestroy();
-        logSuperStopEntry(MainActivity.class);
+        logSuperStopEntry(MainActivityFragmentCycle.class);
     }
 
     @Override

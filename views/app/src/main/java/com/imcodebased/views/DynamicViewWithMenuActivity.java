@@ -2,18 +2,19 @@ package com.imcodebased.views;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.widget.TextViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
-import android.widget.EditText;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class DynamicViewWithMenuActivity extends AppCompatActivity {
 
 
     private static final int CHECKBOX_ITEM = 101;
@@ -25,12 +26,44 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // wow you don't need to have layout file but it is really not a smart way to set contentView ;)
-        TextView textView = new TextView(this);
-        textView.setText("Hey");
-        setContentView(textView);
 
-        registerForContextMenu(textView);
+        // wow you don't need to have layout file but it is really not a smart way to set contentView ;)
+        final TextView textView1 = new TextView(this);
+        textView1.setText("Hello");
+
+        final TextView textView2 = new TextView(this);
+        textView2.setText("world");
+
+        textView1.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        textView2.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+
+        textView1.setGravity(Gravity.CENTER);
+        textView2.setGravity(Gravity.CENTER);
+
+        textView1.setBackgroundColor(0xffffbb33);
+        textView2.setBackgroundColor(0xff99cc00);
+
+        LinearLayout linearLayout = new LinearLayout(this);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+
+        linearLayout.addView(textView1);
+        linearLayout.addView(textView2);
+
+        // default is long press will open the context menu.
+        registerForContextMenu(textView1);
+
+        registerForContextMenu(textView2);
+
+        // with single click
+        textView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView2.showContextMenu();
+            }
+        });
+
+        setContentView(linearLayout);
     }
 
     @Override
@@ -117,6 +150,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void toast(String message) {
-        Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(DynamicViewWithMenuActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 }

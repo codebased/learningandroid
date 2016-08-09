@@ -8,15 +8,27 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".DynamicViewWithMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".DummyActivity"/>
+        <activity android:name=".LinearLayoutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".FrameLayoutActivity">
+        </activity>
+        <activity android:name=".GravityActivity">
+        </activity>
+        <activity android:name=".RelativeLayoutActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/linearLayoutActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:padding="4dp"
+        android:text="LinearLayout Activity" />
+
+    <Button
+        android:id="@+id/frameLayoutActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:padding="4dp"
+        android:text="FrameLayout Activity" />
+
+    <Button
+        android:id="@+id/relativeLayoutActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:padding="4dp"
+        android:text="RelativeLayout Activity" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#300606" />
+
+
+    <Button
+        android:id="@+id/saveStateActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:padding="4dp"
+        android:text="Save State Activity" />
+
+    <Button
+        android:id="@+id/parcelableActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:padding="4dp"
+        android:text="Parcelable Activity" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#300606" />
+
+    <Button
+        android:id="@+id/menuActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:padding="4dp"
+        android:text="Menu Activity" />
+
+</LinearLayout>

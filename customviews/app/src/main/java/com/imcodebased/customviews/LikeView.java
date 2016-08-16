@@ -1,6 +1,8 @@
 package com.imcodebased.customviews;
 
 import android.content.Context;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,6 +14,8 @@ import android.widget.TextView;
  */
 public class LikeView extends LinearLayout {
 
+    private static final String EXTRA_LIKES = "EXTRA_LIKES";
+    private static final String EXTRA_SUPER_STATE = "EXTRA_SUPER_STATE";
     private TextView textView;
     private ImageView likeButtonImageView;
     private int count;
@@ -29,6 +33,28 @@ public class LikeView extends LinearLayout {
     public LikeView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Parcelable state) {
+
+        if (state instanceof Bundle) {
+            Bundle bundle = (Bundle) state;
+            count = bundle.getInt(EXTRA_LIKES);
+            textView.setText(count + " likes");
+            super.onRestoreInstanceState(bundle.getParcelable(EXTRA_SUPER_STATE));
+        } else {
+            super.onRestoreInstanceState(state);
+        }
+    }
+
+    @Override
+    protected Parcelable onSaveInstanceState() {
+        Bundle bundle = new Bundle();
+        bundle.putParcelable(EXTRA_SUPER_STATE, super.onSaveInstanceState());
+        bundle.putInt(EXTRA_LIKES, count);
+
+        return bundle;
     }
 
     private void init() {

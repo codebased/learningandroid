@@ -35,8 +35,36 @@
         android:orientation="horizontal" />
 
     <com.imcodebased.customviews.PizzaView
+        android:id="@+id/pizzaView"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_centerInParent="true"
-        app:slices="2" />
+        app:slices="5" />
+
+    <com.imcodebased.customviews.PhotoSquare xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pizzaView"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_photo" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_like" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_photo" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_like" />
+    </com.imcodebased.customviews.PhotoSquare>
 </RelativeLayout>

@@ -15,6 +15,7 @@ public class PizzaView extends View {
 
     private Paint paint;
     private int numSlices = 5;
+    private Paint circlePaint;
 
     public PizzaView(Context context) {
         super(context);
@@ -37,10 +38,15 @@ public class PizzaView extends View {
             numSlices = array.getInt(R.styleable.PizzaView_slices, numSlices);
         }
 
+        circlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        circlePaint.setStyle(Paint.Style.FILL);
+        circlePaint.setStrokeWidth(4);
+        circlePaint.setColor(Color.CYAN);
+
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(4);
-        paint.setColor(Color.GREEN);
+        paint.setStrokeWidth(2);
+        paint.setColor(Color.BLACK);
     }
 
     @Override
@@ -53,6 +59,7 @@ public class PizzaView extends View {
         final float diameter = Math.min(width, height) - paint.getStrokeWidth();
         final float radius = diameter / 2;
 
+        canvas.drawCircle(cx, cy, radius, circlePaint);
         canvas.drawCircle(cx, cy, radius, paint);
         drawPizzaCuts(canvas, cx, cy, radius);
     }
@@ -63,8 +70,10 @@ public class PizzaView extends View {
         canvas.save();
         for (int idx = 0; idx < numSlices; ++idx) {
             canvas.rotate(degrees, cx, cy);
+            animate();
             canvas.drawLine(cx, cy, cx, cy - radius, paint);
         }
+
         canvas.restore();
     }
 }

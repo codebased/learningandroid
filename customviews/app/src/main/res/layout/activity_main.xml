@@ -10,6 +10,7 @@
     tools:context="com.imcodebased.customviews.MainActivity">
 
     <com.imcodebased.customviews.CreditCardEditText
+        android:id="@+id/creditCardEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -19,4 +20,14 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true" />
 
+    <com.imcodebased.customviews.DescriptionView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/creditCardEditText"
+        android:stretchColumns="1" />
+
+    <com.imcodebased.customviews.LikeView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">views</string>
+    <string name="app_name">VIEW</string>
+    <string name="this_is_not_ireland_this_is_india_flag">This is not Ireland this is India flag</string>
 </resources>

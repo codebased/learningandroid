@@ -8,16 +8,17 @@ import android.os.Parcelable;
  */
 public class Quote implements Parcelable {
 
-    private String quote ;
+    private String quote;
 
-    public String getQuote(){
+    public String getQuote() {
         return quote;
     }
+
     protected Quote(Parcel in) {
         quote = in.readString();
     }
 
-    public Quote(){
+    public Quote() {
         this.quote = "default quote";
     }
 

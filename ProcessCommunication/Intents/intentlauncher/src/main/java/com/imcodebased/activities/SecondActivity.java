@@ -1,5 +1,6 @@
 package com.imcodebased.activities;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -36,7 +37,10 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         switch (v.getId()) {
             case R.id.launchFirstActivity:
                 getIntent().putExtra("result", resultEditView.getText());
-                setResult(FirstActivity.REQUEST_CODE, getIntent());
+                setResult(Activity.RESULT_OK, getIntent());
+                // by using onback pressed it will do exactly the same thing as finish.
+                // because it will eventually call finish().
+//                onBackPressed();
                 finish();
         }
     }

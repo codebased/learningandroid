@@ -19,7 +19,7 @@ public class ReuseLayoutActivity extends AppCompatActivity {
 
     public void expend(View view) {
 
-        ViewStub stub = (ViewStub) findViewById(R.id.stub);
-        View inflated = stub.inflate();
+//        ViewStub stub = (ViewStub) findViewById(R.id.stub);
+//        View inflated = stub.inflate();
     }
 }

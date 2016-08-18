@@ -4,45 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:foreground="@drawable/ic_chakra"
-    android:foregroundGravity="center"
     tools:context="com.imcodebased.views.FrameLayoutActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#530e0e"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="#dcab58"
-            android:gravity="center"
-            android:textSize="40sp"/>
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="right|top"
+        android:background="#38513a"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="#f8fffa"
-            android:gravity="center"
-            android:textSize="40sp"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="#5fba79"
-            android:gravity="center"
-            android:textSize="40sp"/>
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
 
-    </LinearLayout>
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="#dcab58"-->
+    <!--android:gravity="center"-->
+    <!--android:textSize="40sp"/>-->
 
-    <!--<ImageView-->
-    <!--android:layout_width="72dp"-->
-    <!--android:layout_height="72dp"-->
-    <!--android:scaleType="fitXY" android:layout_gravity="center"-->
-    <!--android:src="@drawable/ic_chakra"/>-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="#f8fffa"-->
+    <!--android:gravity="center"-->
+    <!--android:textSize="40sp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="#5fba79"-->
+    <!--android:gravity="center"-->
+    <!--android:textSize="40sp"/>-->
+
+    <!--</LinearLayout>-->
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="right|top"
+        android:layout_margin="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_chakra"/>
 
 </FrameLayout>

@@ -1,5 +1,6 @@
 package com.imcodebased.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -46,8 +47,10 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == REQUEST_CODE) {
-            resultTextView.setText(data.getCharSequenceExtra("result"));
+        if (requestCode == REQUEST_CODE) {
+            if ( resultCode == Activity.RESULT_OK) {
+                resultTextView.setText(data.getCharSequenceExtra("result"));
+            }
         } else {
             resultTextView.setText("");
         }

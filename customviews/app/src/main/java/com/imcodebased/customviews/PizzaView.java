@@ -16,6 +16,7 @@ public class PizzaView extends View {
     private Paint paint;
     private int numSlices = 5;
     private Paint circlePaint;
+    private int strokeSize = 4;
 
     public PizzaView(Context context) {
         super(context);
@@ -35,7 +36,8 @@ public class PizzaView extends View {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.PizzaView);
-            numSlices = array.getInt(R.styleable.PizzaView_slices, numSlices);
+            numSlices = array.getInt(R.styleable.PizzaView_slices, 2);
+            strokeSize = array.getInt(R.styleable.PizzaView_strokeSize, 4);
         }
 
         circlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -45,21 +47,20 @@ public class PizzaView extends View {
 
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(2);
+        paint.setStrokeWidth(strokeSize);
         paint.setColor(Color.BLACK);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        final int width = getWidth() - getPaddingLeft() - getPaddingRight();
-        final int height = getHeight() - getPaddingTop() - getPaddingBottom();
-        final int cx = width / 2 + getPaddingLeft();
-        final int cy = height / 2 + getPaddingTop();
+        final int width = getWidth();
+        final int height = getHeight();
+        final int cx = width / 2;
+        final int cy = height / 2;
 
         final float diameter = Math.min(width, height) - paint.getStrokeWidth();
         final float radius = diameter / 2;
 
-        canvas.drawCircle(cx, cy, radius, circlePaint);
         canvas.drawCircle(cx, cy, radius, paint);
         drawPizzaCuts(canvas, cx, cy, radius);
     }
@@ -70,7 +71,6 @@ public class PizzaView extends View {
         canvas.save();
         for (int idx = 0; idx < numSlices; ++idx) {
             canvas.rotate(degrees, cx, cy);
-            animate();
             canvas.drawLine(cx, cy, cx, cy - radius, paint);
         }
 

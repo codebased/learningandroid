@@ -1,12 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/black">
+                android:layout_height="match_parent" android:padding="10dp"
+    >
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/linear"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/includeLayout"
+            layout="@layout/reuselayout"/>
+
+
+        <include
+            android:id="@+id/includeLayout"
+            layout="@layout/reuselayout"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/buttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear" android:text="Subview"
+        android:onClick="expend"/>
+
+    <ViewStub
+        android:id="@+id/stub"
+        android:layout_width="120dip"
+        android:layout_height="40dip"
+        android:layout_below="@+id/buttn"
+        android:inflatedId="@+id/subTree"
+        android:layout="@layout/mysubtext"/>
+
 
 </RelativeLayout>

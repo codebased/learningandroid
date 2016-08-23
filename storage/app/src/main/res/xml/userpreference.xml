@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="pref_general_settings"
+        android:title="General Settings">
+
+        <ListPreference
+            android:defaultValue="popular"
+            android:entries="@array/categories"
+            android:entryValues="@array/categories_value"
+            android:key="@string/movies_categories_key"
+            android:summary="Select categories of movies"
+            android:title="Categories"/>
+
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="showme"
+            android:title="Show me"/>
+
+        <Preference
+            android:dependency="showme"
+            android:key="pref_delete"
+            android:summary="Google"
+            android:title="Google">
+            <intent android:action="android.intent.action.VIEW"
+                    android:data="http://www.example.com" />
+        </Preference>
+
+
+    </PreferenceCategory>
+
+    <PreferenceScreen
+        android:key="button_voicemail_category_key"
+        android:persistent="false"
+        android:title="Voice mail">
+
+        <ListPreference
+            android:key="button_voicemail_provider_key"
+            android:title="voice mail provider"/>
+
+    </PreferenceScreen>
+
+
+</PreferenceScreen>

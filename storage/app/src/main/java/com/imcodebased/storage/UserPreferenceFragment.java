@@ -7,9 +7,9 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
 import android.support.v7.preference.PreferenceManager;
 
-public class PreferenceFragment extends PreferenceFragmentCompat implements
+public class UserPreferenceFragment extends PreferenceFragmentCompat implements
         SharedPreferences.OnSharedPreferenceChangeListener {
-    private static final String TAG = PreferenceFragment.class.getSimpleName();
+    private static final String TAG = UserPreferenceFragment.class.getSimpleName();
 
     SharedPreferences sharedPreferences;
 

@@ -3,7 +3,7 @@ package com.imcodebased.storage;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-public class PreferenceActivity extends AppCompatActivity {
+public class UserPreferenceActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -11,7 +11,7 @@ public class PreferenceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.content, new PreferenceFragment())
+                .replace(R.id.content, new UserPreferenceFragment())
                 .commit();
 
     }

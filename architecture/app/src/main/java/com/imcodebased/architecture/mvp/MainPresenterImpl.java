@@ -1,9 +1,11 @@
 package com.imcodebased.architecture.mvp;
 
+import de.greenrobot.event.EventBus;
 
-import java.util.List;
-
-public class MainPresenterImpl implements MainPresenter, ItemService.ItemListener {
+/*
+No need for interfaces, callbacks for asynchronous communication or data propagation through all software layers.
+ */
+public class MainPresenterImpl implements MainPresenter {
 
     private MainView mainView;
     private ItemService mItemService;
@@ -15,11 +17,13 @@ public class MainPresenterImpl implements MainPresenter, ItemService.ItemListene
 
     @Override
     public void onResume() {
+        EventBus.getDefault().register(this);
+
         if (mainView != null) {
             mainView.showProgress();
         }
 
-        mItemService.findItems(this);
+        mItemService.findItems();
     }
 
     @Override
@@ -30,14 +34,18 @@ public class MainPresenterImpl implements MainPresenter, ItemService.ItemListene
     }
 
     @Override
+    public void onPause() {
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Override
     public void onDestroy() {
         mainView = null;
     }
 
-    @Override
-    public void onLoad(List<String> items) {
+    public void onEvent(ItemEventMessage event) {
         if (mainView != null) {
-            mainView.setItems(items);
+            mainView.setItems(event.getItems());
             mainView.hideProgress();
         }
     }

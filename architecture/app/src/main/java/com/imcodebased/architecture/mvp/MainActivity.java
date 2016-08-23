@@ -36,6 +36,12 @@ public class MainActivity extends Activity implements MainView, AdapterView.OnIt
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        presenter.onPause();
+    }
+
+    @Override
     protected void onDestroy() {
         presenter.onDestroy();
         super.onDestroy();

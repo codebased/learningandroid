@@ -5,13 +5,15 @@ import android.os.Handler;
 import java.util.Arrays;
 import java.util.List;
 
+import de.greenrobot.event.EventBus;
+
 public class ItemServiceImpl implements ItemService {
     @Override
-    public void findItems(final ItemListener listener) {
+    public void findItems() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                listener.onLoad(getData());
+                EventBus.getDefault().post(new ItemEventMessage(getData()));
             }
         }, 2000);
     }

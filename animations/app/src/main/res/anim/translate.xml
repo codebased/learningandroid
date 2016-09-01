@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- x, y values can be defined as:  percent relative to itself
+"75% ", a percent relative to
+its parent "-50%p", or an
+absolute number of pixels
+"43.5" -->
+
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+           android:duration="500"
+           android:fromXDelta="0"
+           android:fromYDelta="0"
+           android:repeatCount="1"
+           android:repeatMode="reverse"
+           android:toXDelta="0"
+           android:toYDelta="500"/>

@@ -20,10 +20,10 @@ public class ManualPreferenceActivity extends AppCompatActivity {
     }
 
     public void saveme(View view) {
+
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         sharedPreferences.edit().putString("SAVE", "ME").commit();
 
         Log.i("Manual", sharedPreferences.getString("SAVE", "NOT"));
-
     }
 }

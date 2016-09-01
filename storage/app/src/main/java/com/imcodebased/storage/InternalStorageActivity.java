@@ -75,7 +75,7 @@ public class InternalStorageActivity extends AppCompatActivity {
         String string = "iOS Swift is simple than an Android.";
 
         try {
-            FileOutputStream fileOutputStream = openFileOutput(FILE_NAME, Context.MODE_APPEND);
+            FileOutputStream fileOutputStream = openFileOutput(FILE_NAME, Context.MODE_PRIVATE);
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
             BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
             bufferedWriter.write(string);

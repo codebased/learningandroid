@@ -13,7 +13,6 @@
             android:summary="Select categories of movies"
             android:title="Categories"/>
 
-
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="showme"

@@ -1,15 +1,17 @@
 package com.codebased.phonelist;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
-/**
- * Created by codebased on 3/09/16.
- */
+import com.codebased.phonelist.adapters.CustomFragmentStatePagerAdapter;
+
 public class TabMainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -29,4 +31,6 @@ public class TabMainActivity extends AppCompatActivity {
         viewpager.setAdapter(new CustomFragmentStatePagerAdapter(getSupportFragmentManager()));
         tablayout.setupWithViewPager(viewpager);
     }
+
+
 }

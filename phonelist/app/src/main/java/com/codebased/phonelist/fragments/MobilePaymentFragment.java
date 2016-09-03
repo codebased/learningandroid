@@ -1,8 +1,11 @@
-package com.codebased.phonelist;
+package com.codebased.phonelist.fragments;
 
 import android.animation.Animator;
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,10 +15,13 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.codebased.phonelist.Utils.KeyboardUtil;
+import com.codebased.phonelist.R;
+import com.codebased.phonelist.utils.KeyboardUtil;
 import com.codebased.phonelist.widgets.ListItemData;
 import com.codebased.phonelist.widgets.PhoneContactSelectorListener;
 import com.codebased.phonelist.widgets.PhoneContactSelectorView;
+
+import java.util.ArrayList;
 
 public class MobilePaymentFragment extends Fragment {
 
@@ -24,6 +30,7 @@ public class MobilePaymentFragment extends Fragment {
     private RelativeLayout emptyLayout;
 
     private Button payButton;
+    private Button voiceButtonView;
 
     @Nullable
     @Override
@@ -35,6 +42,22 @@ public class MobilePaymentFragment extends Fragment {
         paytoLayout = (RelativeLayout) view.findViewById(R.id.paytoLayout);
         emptyLayout = (RelativeLayout) view.findViewById(R.id.emptyLayout);
         payButton = (Button) paytoLayout.findViewById(R.id.payButton);
+        voiceButtonView = (Button) emptyLayout.findViewById(R.id.voiceButtonView);
+
+        voiceButtonView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int REQUEST_CODE = 1;
+                String DIALOG_TEXT = "Speech recognition demo";
+                Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                intent.putExtra(RecognizerIntent.EXTRA_PROMPT, DIALOG_TEXT);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                        RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, REQUEST_CODE);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
+                startActivityForResult(intent, 2);
+            }
+        });
 
         return view;
 
@@ -109,7 +132,7 @@ public class MobilePaymentFragment extends Fragment {
                             BitmapDrawable ob = new BitmapDrawable(getResources(), listItemData.getThumbnail());
                             paytoLayout.findViewById(R.id.image).setBackground(ob);
                         } else {
-                            paytoLayout.findViewById(R.id.image).setBackground(getResources().getDrawable(R.drawable.unnamed));
+                            paytoLayout.findViewById(R.id.image).setBackground(getResources().getDrawable(R.drawable.grumpy));
                         }
 
                         paytoLayout.findViewById(R.id.amount).requestFocus();
@@ -142,5 +165,22 @@ public class MobilePaymentFragment extends Fragment {
                 emptyLayout.setAlpha(1);
             }
         });
+
+    }
+
+
+    String resultSpeech = "";
+
+    @Override
+    public void onActivityResult(int requestCode, int resultcode, Intent intent) {
+        super.onActivityResult(requestCode, resultcode, intent);
+        ArrayList<String> speech;
+        if (resultcode == Activity.RESULT_OK) {
+            if (requestCode == 2) {
+                speech = intent.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                phoneListView.mPhoneSearchTextView.setText(speech.get(0));
+                //you can set resultSpeech to your EditText or TextView
+            }
+        }
     }
 }

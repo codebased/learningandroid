@@ -1,6 +1,8 @@
 package com.codebased.phonelist.widgets;
 
 import android.content.Context;
+import android.content.Intent;
+import android.speech.RecognizerIntent;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -9,7 +11,7 @@ import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.LinearLayout;
 
-import com.codebased.phonelist.Utils.KeyboardUtil;
+import com.codebased.phonelist.utils.KeyboardUtil;
 import com.codebased.phonelist.R;
 
 import java.util.ArrayList;
@@ -18,7 +20,7 @@ public class PhoneContactSelectorView extends LinearLayout implements
         AdapterView.OnItemClickListener,
         AdapterView.OnItemSelectedListener {
 
-    private AutoCompleteTextView mPhoneSearchTextView;
+    public AutoCompleteTextView mPhoneSearchTextView;
     private PhoneContactAdapter mPhoneContactAdapter;
     private ArrayList<ListItemData> mPhoneContactList;
     private PhoneContactSelectorListener mPhoneContactSelectorListener;

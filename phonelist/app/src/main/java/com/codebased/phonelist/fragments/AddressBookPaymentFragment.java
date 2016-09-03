@@ -1,4 +1,4 @@
-package com.codebased.phonelist;
+package com.codebased.phonelist.fragments;
 
 import android.support.v4.app.Fragment;
 

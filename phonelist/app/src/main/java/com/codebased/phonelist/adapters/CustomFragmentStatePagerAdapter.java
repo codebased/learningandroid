@@ -1,8 +1,11 @@
-package com.codebased.phonelist;
+package com.codebased.phonelist.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.codebased.phonelist.fragments.MobilePaymentFragment;
+import com.codebased.phonelist.fragments.AddressBookPaymentFragment;
 
 import java.util.ArrayList;
 import java.util.List;

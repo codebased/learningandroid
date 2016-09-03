@@ -1,4 +1,4 @@
-package com.codebased.phonelist.Utils;
+package com.codebased.phonelist.utils;
 
 
 import android.content.Context;

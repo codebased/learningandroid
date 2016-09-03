@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/phoneSearchTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:singleLine="true"
+            android:nextFocusLeft="@id/phoneSearchTextView"
+            android:nextFocusUp="@id/phoneSearchTextView"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+</LinearLayout>

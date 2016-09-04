@@ -18,7 +18,7 @@
 
         <AutoCompleteTextView
             android:id="@+id/phoneSearchTextView"
-            android:layout_width="match_parent"
+            android:layout_width="match_parent" android:textColor="#252424"
             android:layout_height="wrap_content" android:singleLine="true"
             android:nextFocusLeft="@id/phoneSearchTextView"
             android:nextFocusUp="@id/phoneSearchTextView"

@@ -163,6 +163,17 @@ public class MobilePaymentFragment extends Fragment {
                 paytoLayout.setVisibility(View.GONE);
                 emptyLayout.setVisibility(View.VISIBLE);
                 emptyLayout.setAlpha(1);
+                phoneListView.mPhoneSearchTextView.setText("");
+            }
+        });
+
+        payButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                paytoLayout.setVisibility(View.GONE);
+                emptyLayout.setVisibility(View.VISIBLE);
+                emptyLayout.setAlpha(1);
+                phoneListView.mPhoneSearchTextView.setText("");
             }
         });
 

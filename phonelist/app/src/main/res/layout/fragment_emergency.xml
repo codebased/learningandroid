@@ -31,12 +31,13 @@
                 android:layout_below="@id/phoneListView"
                 android:layout_centerHorizontal="true"
                 android:text="Speak"
-                android:visibility="gone"/>
+                />
 
             <ImageView
                 android:id="@+id/emptyImage"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:layout_alignWithParentIfMissing="true"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="true"
                 android:layout_below="@id/voiceButtonView"
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/addressbook"

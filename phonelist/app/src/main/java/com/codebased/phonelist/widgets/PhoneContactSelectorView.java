@@ -1,18 +1,21 @@
 package com.codebased.phonelist.widgets;
 
 import android.content.Context;
-import android.content.Intent;
-import android.speech.RecognizerIntent;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.codebased.phonelist.adapters.PhoneContactAdapter;
+import com.codebased.phonelist.utils.ContactUtils;
 import com.codebased.phonelist.utils.KeyboardUtil;
 import com.codebased.phonelist.R;
+import com.codebased.phonelist.widgets.listeners.PhoneContactSelectorListener;
+import com.codebased.phonelist.widgets.models.ListItemData;
 
 import java.util.ArrayList;
 
@@ -24,6 +27,7 @@ public class PhoneContactSelectorView extends LinearLayout implements
     private PhoneContactAdapter mPhoneContactAdapter;
     private ArrayList<ListItemData> mPhoneContactList;
     private PhoneContactSelectorListener mPhoneContactSelectorListener;
+    private Button voiceButtonView;
 
     public PhoneContactSelectorView(Context context) {
         super(context);
@@ -45,6 +49,9 @@ public class PhoneContactSelectorView extends LinearLayout implements
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
         inflater.inflate(R.layout.phonecontactview, this);
+
+
+        voiceButtonView = (Button) findViewById(R.id.voiceButtonView);
 
         mPhoneSearchTextView = (AutoCompleteTextView) findViewById(R.id.phoneSearchTextView);
 
@@ -114,5 +121,9 @@ public class PhoneContactSelectorView extends LinearLayout implements
 
     public void setPhoneContactSelectorListener(PhoneContactSelectorListener selectorListener) {
         mPhoneContactSelectorListener = selectorListener;
+    }
+
+    public Button getVoiceButtonView() {
+        return voiceButtonView;
     }
 }

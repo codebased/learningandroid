@@ -2,6 +2,7 @@ package com.codebased.phonelist;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.speech.RecognizerIntent;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -18,6 +19,8 @@ public class TabMainActivity extends AppCompatActivity {
     private ViewPager viewpager;
     private TabLayout tablayout;
 
+    final static String LAST_TAB = "LAST_TAB";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +33,17 @@ public class TabMainActivity extends AppCompatActivity {
         toolbar.setTitle("Wonderland App");
         viewpager.setAdapter(new CustomFragmentStatePagerAdapter(getSupportFragmentManager()));
         tablayout.setupWithViewPager(viewpager);
+        int currentItem = PreferenceManager.getDefaultSharedPreferences(this).getInt(LAST_TAB, 1);
+
+        viewpager.setCurrentItem(currentItem);
+        tablayout.setOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewpager) {
+
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                super.onTabSelected(tab);
+                PreferenceManager.getDefaultSharedPreferences(TabMainActivity.this).edit().putInt(LAST_TAB, tab.getPosition()).apply();
+
+            }
+        });
     }
-
-
 }

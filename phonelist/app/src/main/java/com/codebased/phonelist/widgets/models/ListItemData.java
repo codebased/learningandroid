@@ -1,4 +1,4 @@
-package com.codebased.phonelist.widgets;
+package com.codebased.phonelist.widgets.models;
 
 import android.graphics.Bitmap;
 

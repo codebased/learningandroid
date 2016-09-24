@@ -19,13 +19,13 @@ public class CustomFragmentStatePagerAdapter extends FragmentStatePagerAdapter {
         super(fm);
         fragments = new ArrayList<>();
         titles = new ArrayList<>();
-        fragments.add(new MobilePaymentFragment());
         fragments.add(new AddressBookPaymentFragment());
+        fragments.add(new MobilePaymentFragment());
         fragments.add(new Fragment());
 
-        titles.add("Pay to Mobile Phone");
         titles.add("Pay to Account");
-        titles.add("International Money Transfer");
+        titles.add("Pay to Mobile");
+        titles.add("Pay Overseas");
     }
 
     @Override

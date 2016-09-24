@@ -8,7 +8,7 @@ package starterkit;
 
 import static starterkit.StaticClass.*;
 
-public class HelloSteven {
+public class play {
 
 
     public static void main(String args[]) {
@@ -32,8 +32,8 @@ public class HelloSteven {
 //        FinalClass finalClass = new FinalClass();
 //        finalClass.play();
 //
-//        StringClass stringClass = new StringClass();
-//        stringClass.play();
+        StringClass stringClass = new StringClass();
+        stringClass.play();
 //
 //        ErrorHandlerClass errorHandlerClass = new ErrorHandlerClass();
 //        errorHandlerClass.play();

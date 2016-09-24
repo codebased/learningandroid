@@ -1,4 +1,4 @@
-package com.codebased.phonelist.widgets;
+package com.codebased.phonelist.utils;
 
 
 import android.content.ContentUris;
@@ -9,6 +9,8 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
+
+import com.codebased.phonelist.widgets.models.ListItemData;
 
 import java.io.IOException;
 import java.util.ArrayList;

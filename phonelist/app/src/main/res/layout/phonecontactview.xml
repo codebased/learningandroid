@@ -10,21 +10,42 @@
         android:focusable="true"
         android:focusableInTouchMode="true"/>
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/text_input_layout"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:orientation="horizontal">
 
-        <AutoCompleteTextView
-            android:id="@+id/phoneSearchTextView"
-            android:layout_width="match_parent" android:textColor="#252424"
-            android:layout_height="wrap_content" android:singleLine="true"
-            android:nextFocusLeft="@id/phoneSearchTextView"
-            android:nextFocusUp="@id/phoneSearchTextView"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/phoneSearchTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Select or enter a new number"
+                android:hint="Select or enter a new number"
+                android:nextFocusLeft="@id/phoneSearchTextView"
+                android:nextFocusUp="@id/phoneSearchTextView"
+                android:singleLine="true"
+                android:textColor="#252424"
+                android:textColorHint="@android:color/white"
+                />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/voiceButtonView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|end|bottom"
+            android:layout_weight="1"
+            android:text="S"
             />
-    </android.support.design.widget.TextInputLayout>
-
-
+    </LinearLayout>
 
 </LinearLayout>

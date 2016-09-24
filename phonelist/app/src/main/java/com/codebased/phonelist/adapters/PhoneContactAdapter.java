@@ -1,4 +1,4 @@
-package com.codebased.phonelist.widgets;
+package com.codebased.phonelist.adapters;
 
 
 import android.content.Context;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 
 import com.codebased.phonelist.R;
+import com.codebased.phonelist.widgets.models.ListItemData;
 
 import java.util.ArrayList;
 

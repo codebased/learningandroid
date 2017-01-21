@@ -1,15 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0"
+    compileSdkVersion 24
+    buildToolsVersion "24.0"
 
     defaultConfig {
         applicationId "com.imcodebased.justjava"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 24
         versionCode 1
         versionName "tests.0"
+        jackOptions {
+            enabled true
+        }
     }
     buildTypes {
         release {
@@ -17,6 +20,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {

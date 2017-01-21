@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, InternalStorageActivity.class));
                 break;
             case R.id.btnLocalpreferenceActivity:
-                startActivity(new Intent(this, LocalPreferenceActivity.class));
+                startActivity(new Intent(this, LPreferenceActivity.class));
                 break;
             case R.id.btnPreferenceActivity:
                 startActivity(new Intent(this, UserPreferenceActivity.class));

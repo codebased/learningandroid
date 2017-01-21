@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- You are save to use from API 1.0-->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:oneshot="false">
+    <!-- movies are shown at 24 frames per second, because at that speed, most people cannot see any flickering or visual glitches.
+    On a mobile dvice, you can get away with fewer frames - around, 12 frames per second, which looks nicer.
+
+    DURATION: milliseconds per frame = 1000 (seconds) / frames per seconds.
+    -->
+
+    <item android:drawable="@drawable/frame1" android:duration="200" />
+    <item android:drawable="@drawable/frame2" android:duration="200" />
+    <item android:drawable="@drawable/frame3" android:duration="200" />
+    <item android:drawable="@drawable/frame4" android:duration="200" />
+</animation-list>

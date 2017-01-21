@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The Animated-selector is implemented only for Lollipop (and above), so we’re going to define our XML in the -v21 package. -->
+
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/on"
+        android:state_activated="true">
+        <bitmap
+            android:src="@drawable/frame4"/>
+    </item>
+
+    <item
+        android:id="@+id/off">
+        <bitmap
+            android:src="@drawable/frame1"/>
+    </item>
+
+    <transition
+        android:drawable="@drawable/stickmanframeanimationdown"
+        android:fromId="@+id/on"
+        android:toId="@+id/off">
+    </transition>
+
+    <transition
+        android:drawable="@drawable/stickmanframeanimationup"
+        android:fromId="@id/off"
+        android:toId="@id/on">
+    </transition>
+
+</animated-selector>

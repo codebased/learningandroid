@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- points:
+1. the interpolator is important to be dec... so that it is smooth. Try with something else.
+2. check the duration, and also the toYDelta which is specify as %.
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:interpolator="@android:anim/decelerate_interpolator"
+     android:shareInterpolator="true">
+    <translate
+        android:duration="500"
+        android:fromYDelta="100%"
+        android:toYDelta="-0.5%"
+        />
+
+    <translate
+        android:duration="30"
+        android:fromYDelta="-0.5%"
+        android:startOffset="501"
+        android:toYDelta="0%"/>
+</set>

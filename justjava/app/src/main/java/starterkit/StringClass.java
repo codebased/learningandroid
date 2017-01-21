@@ -4,7 +4,9 @@ package starterkit;
  * Created by codebased on 19/07/16.
  */
 
-// String is mutable in nature
+// Strings are different from most other Java objects in that they are immutable. What this
+// means is that you cannot modify a String object. If you do then you are going to get the
+    // new object
 public class StringClass {
 
     // stored using UTF-16 encoding.
@@ -25,9 +27,7 @@ public class StringClass {
         System.out.println(s1 == s2); // return false because it first compares the object memory address
         System.out.println(s1.equals(s2)); // return true because it compares the value.
 
-
-
-        /// now s3 and s4 is pointing to the same address; thus the comparison is going to be at memory address pointer level and it will be faster.
+        // now s3 and s4 is pointing to the same address; thus the comparison is going to be at memory address pointer level and it will be faster.
         String s3 = s1.intern();
         String s4 = s2.intern();
 
@@ -40,10 +40,27 @@ public class StringClass {
         System.out.println(String.valueOf(1) + " World");
 
         // Use StringBuilder for mutable string buffer for better performance
-        StringBuilder stringBuilder = new StringBuilder();
+        // The StringBuilder class was introduced in Java 5.0 as a replacement for the StringBuffer.
+        // The StringBuffer has the same methods as the StringBuilder, but is designed for programs
+        // that have multiple threads of execution.
+        // The default capacity of an empty StringBuilder object is 16 characters
+        StringBuilder stringBuilder = new StringBuilder(10);
         stringBuilder.append(1);
         stringBuilder.append(" world");
         System.out.println(stringBuilder);
+
+
+
+        String s7 = "Hey this is so great";
+        // \\s - remove any whitespace
+        // \\S - reverse of \\s
+        // \\w - [A-Za-z_0-9]
+        // \\d - [0-9]
+        String[] token = s7.split("\\s+");
+        for (String s :
+                token) {
+            System.out.println(s);
+        }
 
     }
 }

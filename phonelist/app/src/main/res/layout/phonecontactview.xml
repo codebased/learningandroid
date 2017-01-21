@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/phoneSearchTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Select or enter a new number"
+                android:hint="Select or enter a new number"
+                android:nextFocusLeft="@id/phoneSearchTextView"
+                android:nextFocusUp="@id/phoneSearchTextView"
+                android:singleLine="true"
+                android:textColor="#252424"
+                android:textColorHint="@android:color/white"
+                />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/voiceButtonView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|end|bottom"
+            android:layout_weight="1"
+            android:text="S"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -15,7 +15,13 @@ public class Printer {
 
         // lazy loading
         if ( o == null ){
-            o = new Printer();
+            // thread safe.
+            synchronized (Printer.class)
+            {
+                if ( o == null ) {
+                    o = new Printer();
+                }
+            }
         }
 
         return o;

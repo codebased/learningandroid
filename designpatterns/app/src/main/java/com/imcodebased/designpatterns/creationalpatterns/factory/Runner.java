@@ -1,10 +1,6 @@
-package com.imcodebased.designpatterns;
+package com.imcodebased.designpatterns.creationalpatterns.factory;
 
- import com.imcodebased.designpatterns.factory.FactoryGenerator;
-import com.imcodebased.designpatterns.factory.*;
-import com.imcodebased.designpatterns.factory.PeripheralFactory;
-
-/**
+ /**
  * Created by codebased on 20/1/17.
  */
 

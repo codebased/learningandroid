@@ -1,4 +1,4 @@
-package com.imcodebased.designpatterns.factory;
+package com.imcodebased.designpatterns.creationalpatterns.factory;
 
 // Factory Pattern: A part of creational pattern that create an object.
 public class BoardFactory implements AbstractFactory {

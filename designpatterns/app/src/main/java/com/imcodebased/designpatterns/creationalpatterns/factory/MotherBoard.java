@@ -1,4 +1,4 @@
-package com.imcodebased.designpatterns.factory;
+package com.imcodebased.designpatterns.creationalpatterns.factory;
 
 public class MotherBoard implements Board {
     @Override

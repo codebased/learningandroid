@@ -1,4 +1,4 @@
-package com.imcodebased.designpatterns.factory;
+package com.imcodebased.designpatterns.creationalpatterns.factory;
 
 /**
  * Created by codebased on 20/1/17.
